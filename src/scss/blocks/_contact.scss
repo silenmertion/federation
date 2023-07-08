@@ -1,0 +1,73 @@
+.contact {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 1001;
+
+  transform: translate(-50%, -50%);
+
+  &.active {
+    display: block;
+  }
+}
+
+.contact-form {
+  padding: 40px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 20px 0;
+
+  text-align: center;
+
+  background-color: $white;
+
+  & > input {
+    min-width: 500px;
+    padding: 10px 12px;
+
+    color: $white;
+
+    background-color: $accent-gray;
+  }
+
+  & > textarea {
+    min-width: 500px;
+    min-height: 200px;
+    padding: 10px 12px;
+
+    color: $white;
+
+    background-color: $accent-gray;
+
+    outline: none;
+    resize: vertical;
+  }
+
+  & > button {
+    min-width: 500px;
+    padding: 10px 12px;
+
+    color: $white;
+
+    background-color: $accent-gray;
+  }
+}
+
+.shadow {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+
+  background-color: #1f1f1fa4;
+
+  &.active {
+    display: block;
+  }
+}
+
+.lock {
+  overflow: hidden;
+}

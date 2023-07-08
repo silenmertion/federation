@@ -1,0 +1,50 @@
+const headerBtn = document.querySelector(".header-burger");
+
+headerBtn.addEventListener("click", () => {
+  document.querySelector(".header-nav").classList.toggle("active");
+  document.querySelector(".header-burger__wrapper").classList.toggle("active");
+});
+
+// Contact
+const contactBtn = document.querySelector(".header-nav__btn");
+const shadow = document.querySelector(".shadow");
+
+contactBtn.addEventListener("click", () => {
+  showContact();
+});
+
+shadow.addEventListener("click", () => {
+  hideContact();
+});
+
+function showContact() {
+  document.querySelector("body").classList.add("lock");
+  document.querySelector(".contact").classList.add("active");
+  shadow.classList.add("active");
+}
+
+function hideContact() {
+  document.querySelector("body").classList.remove("lock");
+  document.querySelector(".contact").classList.remove("active");
+  shadow.classList.remove("active");
+}
+
+// Аккордеон
+const acoordeonBtn = document.querySelectorAll(".accordeon-quest");
+
+acoordeonBtn.forEach((el) => {
+  el.addEventListener("click", () => {
+    const accordeonAnswer = el.nextElementSibling;
+    el.classList.toggle("active");
+    if (accordeonAnswer.style.maxHeight) {
+      document.querySelectorAll(".accordeon-answer").forEach((el) => {
+        el.style.maxHeight = null;
+      });
+    } else {
+      document.querySelectorAll(".accordeon-answer").forEach((el) => {
+        el.style.maxHeight = null;
+      });
+      accordeonAnswer.style.maxHeight = accordeonAnswer.scrollHeight + "px";
+    }
+  });
+});

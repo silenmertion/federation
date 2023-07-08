@@ -1,0 +1,31 @@
+.about-content {
+  display: flex;
+  flex-direction: column;
+  gap: 24px 0;
+}
+
+.about-text {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.about-list {
+  padding-left: 20px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 16px 0;
+}
+
+.about-list__item {
+  max-width: 800px;
+
+  list-style-type: square;
+  font-size: 18px;
+  font-weight: 400;
+
+  &::marker {
+    color: $accent-red;
+    background-color: $accent-red;
+  }
+}

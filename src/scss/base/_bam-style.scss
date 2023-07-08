@@ -1,0 +1,35 @@
+.section {
+  padding: 40px 0;
+}
+
+.section--grey {
+  background-color: $accent-gray;
+}
+
+.section--light-grey {
+  background-color: $sponsor-dark;
+}
+
+.section-header {
+  padding: 20px 0;
+}
+
+.title {
+  font-size: 30px;
+  font-weight: 600;
+
+  &::after {
+    content: "_";
+    font-size: 30px;
+    color: $accent-purple;
+  }
+}
+
+.title-contact {
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.title--white {
+  color: $white;
+}
