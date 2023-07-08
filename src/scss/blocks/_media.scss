@@ -114,6 +114,20 @@
     justify-content: left;
     grid-template-columns: repeat(1, 400px);
   }
+
+  .contact-form {
+    justify-content: center;
+
+    & > input {
+      width: 100%;
+      max-width: 100px;
+    }
+
+    & > textarea {
+      width: 100%;
+      max-width: 100px;
+    }
+  }
 }
 
 @media (max-width: 470px) {
