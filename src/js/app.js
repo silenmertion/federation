@@ -5,6 +5,14 @@ headerBtn.addEventListener("click", () => {
   document.querySelector(".header-burger__wrapper").classList.toggle("active");
 });
 
+document.querySelectorAll(".header-menu__link").forEach((el) => {
+  el.addEventListener("click", () => {
+    document.querySelector(".header-nav").classList.remove("active");
+    document
+      .querySelector(".header-burger__wrapper")
+      .classList.remove("active");
+  });
+});
 // Contact
 const contactBtn = document.querySelector(".header-nav__btn");
 const shadow = document.querySelector(".shadow");
@@ -48,3 +56,13 @@ acoordeonBtn.forEach((el) => {
     }
   });
 });
+
+// Btn
+
+window.onscroll = function showBtn() {
+  if (window.pageYOffset > 400) {
+    document.querySelector(".top-btn").classList.add("active");
+  } else {
+    document.querySelector(".top-btn").classList.remove("active");
+  }
+};
