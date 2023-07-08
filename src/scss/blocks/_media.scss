@@ -54,12 +54,12 @@
     }
 
     &.active::before {
-      transform: rotate(-140deg);
+      transform: rotate(-45deg);
       top: 50%;
     }
 
     &.active::after {
-      transform: rotate(140deg);
+      transform: rotate(45deg);
       top: 50%;
     }
   }
